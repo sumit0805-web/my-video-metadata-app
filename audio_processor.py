@@ -108,8 +108,8 @@ def transcribe_audio(audio_path: str) -> str:
         segments_generator, info = _whisper_model.transcribe(
             str(audio_file),
             beam_size=5,
-            language=None,       # auto-detect
-            vad_filter=True,     # skip silence — helps on CPU
+            language=None,      # auto-detect
+            vad_filter=False,           # skip silence — helps on CPU
         )
 
         print(
