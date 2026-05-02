@@ -13,7 +13,7 @@ python-dotenv==1.0.1
 # ─────────────────────────────────────────────
 # Audio / Transcription
 # ─────────────────────────────────────────────
-openai-whisper==20231117         # Whisper ASR (pulls torch automatically)
+faster-whisper==1.0.3      # Whisper ASR (pulls torch automatically)
 
 # ─────────────────────────────────────────────
 # Deep Learning — CPU-only
@@ -52,3 +52,7 @@ numpy==1.26.4                    # Numerical ops (shared dep)
 # ─────────────────────────────────────────────
 aiofiles==23.2.1                 # Async file I/O helpers
 httpx==0.27.0                    # Async HTTP (used by openai SDK internally) 
+
+
+# Google Gemini API client (if using Gemini instead of OpenAI)
+google-generativeai==0.5.4
