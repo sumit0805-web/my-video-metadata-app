@@ -27,6 +27,11 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
+
+
+
+
+
 # ── Load .env before anything else touches env vars ──────────────
 load_dotenv()
 
@@ -61,6 +66,23 @@ async def lifespan(app: FastAPI):
 # ─────────────────────────────────────────────────────────────────
 # App initialisation
 # ─────────────────────────────────────────────────────────────────
+
+# In your app setup:
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/health")
+async def health_check():
+    return {"status": "ok", "version": "1.0.0"}
+
+
+
 app = FastAPI(
     title="Video Metadata Generator",
     description=(

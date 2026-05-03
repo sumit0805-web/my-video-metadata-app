@@ -1,0 +1,14 @@
+{
+  "app/hooks/useVideoCompression.ts -> @ffmpeg/ffmpeg": {
+    "id": "app/hooks/useVideoCompression.ts -> @ffmpeg/ffmpeg",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_ffmpeg_ffmpeg_dist_esm_index_js.js"
+    ]
+  },
+  "app/hooks/useVideoCompression.ts -> @ffmpeg/util": {
+    "id": "app/hooks/useVideoCompression.ts -> @ffmpeg/util",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_ffmpeg_util_dist_esm_index_js.js"
+    ]
+  }
+}
