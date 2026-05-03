@@ -50,7 +50,7 @@ def download_youtube_video(url: str, dest_dir: str) -> Path:
     if not url or not url.strip():
         raise ValueError("url must be a non-empty string.")
 
-    if not dest_dir or not dest_dir.strip():
+    if not dest_dir or not str(dest_dir).strip():
         raise ValueError("dest_dir must be a non-empty string.")
 
     dest_path = Path(dest_dir)
